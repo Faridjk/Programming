@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Programming</title>
+    <style>
+        
+        .hero{
+            background-image: url(programming.jpg);
+            width: 100%;
+            background-size: cover;
+            background-attachment: fixed;
+            z-index: 2;
+            position: relative;
+        }
+        body{
+            font-family: sans-serif;
+        }
+        .hero::after{
+            content: "";
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(21, 20, 31, 0.8);
+            position: absolute;
+            z-index: -1;
+        }
+        .btn{
+            border-radius: 0;
+        }
+        .frontend{
+            padding: 120px 0;
+        }
+        .card-effect{
+            box-shadow: 5px 10px 10px #888 ;
+            background-color:#fff;
+            padding: 25px;
+            transition: 0.4s;
+        }
+        .card-effect:hover{
+            box-shadow:none;
+            transform: translateY(5px);
+        }
+
+        .iconbox{
+            height: 54px;
+            width: 54px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 42px;
+            border-radius:  50%;
+            flex: none;
+        }
+        .kart{
+            overflow: hidden;
+        }
+        .kart::after{
+            content: '';
+            width: 100%;
+            height: 100%;
+            top: -100%;
+            left: 0;
+            position: absolute;
+            background-color: blue;
+            z-index: -1;
+            transition: 0.4s;
+        }
+
+        .kart:hover .iconbox{
+            background-color:#fff;  
+            color: blue;
+        }
+        .kart:hover h5,
+        .kart:hover p{
+            color: #fff;
+        }
+        .kart:hover::after{
+            opacity: 1;
+            top: 0;
+        }
+        .col-img{
+            background-image: url(web.png);
+            background-size: cover;
+            min-height: 500px;
+        }
+        img{
+            width: 100%;
+        }
+        .project{
+            position: relative;
+            z-index: 2;
+            overflow: hidden;
+        }
+        .overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(21, 20, 31, 0.8);
+            height: 100%;
+            padding: 30px;
+            display: flex;
+            align-items:flex-end;
+            transition: 0.4s;
+            opacity: 0;
+        }
+        .project img{
+            transition: 0.4s;
+        }
+        .overlay:hover{
+            opacity: 1;
+        }
+        .project:hover img{
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Frontend</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto px-lg-5">
+              <li class="nav-item">
+                <a class="nav-link  " aria-current="page" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#web">Web Development</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#aspa">Join Aspa</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+      <div class="hero vh-100 d-flex align-items-center text-center" id="home">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                        <h1 class="text-light display-4" style="font-weight: 700;">Frontend Programmer</h1>
+                        <p class="text-light">A programming language is a system of notation for writing computer programs. <br> Most programming languages are text-based formal languages, but they may also be graphical.</p>
+                        <div class="btn btn-primary py-2 px-4">Search more</div>
+                        <div class="btn btn-outline-light py-2 px-4">Read more</div>
+                </div>
+            </div>
+          </div>
+      </div>
+      <div class="frontend" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mx-auto text-center ">
+                    <h4 class="text-primary">Frontend job</h4>
+                    <h1>All about Frontend</h1>
+                    <span>The description of a programming language is usually split into the two components of syntax (form) and semantics (meaning), which are usually defined by a formal language. Some languages are defined by a specification document (for example, the C programming language is specified by an ISO Standard) while other languages (such as Perl) have a dominant implementation that is treated as a reference. Some languages have both, with the basic language defined by a standard and extensions taken from the dominant implementation being common.</span>
+                </div>
+            </div>
+        <div class="row g-4 mt-5">
+            <div class="col-lg-4 col-sm-6">
+                <div class="kart card-effect">
+                    <div class="iconbox">
+                        <i class='bx bxl-html5' style='color:orange'   ></i>
+                    </div>
+                    <h5 class="pt-3">HTML</h5>
+                    <p>The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It is often assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.</p>
+                </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="kart card-effect">
+                        <div class="iconbox">
+                            <i class='bx bxl-css3' style='color:#0520f7' ></i>
+                        </div>
+                        <h5 class="pt-3">CSS</h5>
+                        <p>Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML . CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.</p>
+                    </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="kart card-effect">
+                            <div class="iconbox">
+                                <i class='bx bxl-javascript' style='color:yellow' ></i>
+                            </div>
+                            <h5 class="pt-3">Java Script</h5>
+                            <p>JavaScript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2022, 98% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="kart card-effect">
+                        <div class="iconbox">
+                            <i class='bx bxl-bootstrap' style='color:purple' ></i>
+                        </div>
+                        <h5 class="pt-3">Bootstrap</h5>
+                        <p>Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains HTML, CSS and (optionally) JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="kart card-effect">
+                    <div class="iconbox">
+                        <i class='bx bxl-sass' style='color:rgb(249, 160, 175)' ></i>
+                    </div>
+                    <h5 class="pt-3">SASS</h5>
+                    <p>Sass (short for syntactically awesome style sheets) is a preprocessor scripting language that is interpreted or compiled into Cascading Style Sheets (CSS). SassScript is the scripting language itself. The original syntax, called "the indented syntax," uses a syntax similar to Haml."</p>
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+            <div class="kart card-effect">
+                <div class="iconbox">
+                    <i class='bx bxl-react' style='color:rgb(6, 255, 189)' ></i>
+                </div>
+                <h5 class="pt-3">React</h5>
+                <p>React (also known as React.js or ReactJS) is a free and open-source front-end JavaScript library[3] for building user interfaces based on components. It is maintained by Meta (formerly Facebook) and a community of individual developers and companies.</p>
+        </div>
+    </div>
+            </div>
+          </div>
+        </div>
+        <div class="row w-100" id="web">     
+                <div class="col-lg-6 col-img" id="features"></div>
+                <div class="col-lg-6 mt-5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-10 offset-md-1">
+                                <h5 class="text-primary ">Read more</h5>
+                                <h1 style="font-weight: 700;">Web Development</h1>
+                                <p>Web development is the work involved in developing a website for the Internet (World Wide Web) or an intranet (a private network). Web development can range from developing a simple single static page of plain text to complex web applications, electronic businesses, and social network services.</p>
+                                <div class="feature d-flex">
+                                    <div class="iconbox">
+                                        <i class='bx bxs-contact' style='color:#0405ff' ></i>
+                                    </div>
+                                    <div class="ps-3">
+                                        <h5>Web Development</h5>
+                                        <p>Web development is the work involved in developing a website for the Internet (World Wide Web) or an intranet (a private network). Web development can range from developing a simple single static page of plain text to complex web applications, electronic businesses, and social network services.</p>
+                                    </div>
+                            </div>
+                            <div class="feature d-flex">
+                                <div class="iconbox">
+                                    <i class='bx bx-minus-back' style='color:#0405ff' ></i>
+                                </div>
+                                <div class="ps-3">
+                                    <h5>Frontend</h5>
+                                    <p>Front-end web development is the development of the graphical user interface of a website, through the use of HTML, CSS, and JavaScript, so that users can view and interact with that website.</p>
+                                </div>
+                        </div>
+                        <div class="feature d-flex">
+                            <div class="iconbox">
+                                <i class='bx bxl-graphql' style='color:#0405ff' ></i>
+                            </div>
+                            <div class="ps-3">
+                                <h5>Backend</h5>
+                                <p>A back-end developer is a type of programmer who creates the logical back-end and core computational logic of a website, software or information system. The developer creates components and features that are indirectly accessed by a user through a front-end application or system.</p>
+                            </div>
+                        </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="main1" id="aspa" style="margin-bottom: 80px;">
+            <div class="container-fluid">
+                <div class="row mb-5" style="margin-top: 100px;"    >
+                    <div class="col-md-8 mx-auto text-center">
+                        <h6 class="text-primary">Programmers</h6>
+                        <h1>Learn Programming with us</h1>
+                        <p>If you want to be a programmer join us, work hard and you will achieve your goals </p>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6 mb-3">
+                        <div class="project">
+                            <img src="engeneer.jpg" alt="" height="280px">
+                            <div class="overlay">
+                                <h4 class="text-light">Do you want to be Frontend Developer?<br><span class="h6">Join ASPA</span> </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-3">
+                        <div class="project">
+                            <img src="engeneer1.jpg" alt="" height="280px">
+                            <div class="overlay">
+                                <h4 class="text-light">Do you want to be Backend Developer?<br><span class="h6">Join ASPA</span> </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-3">
+                        <div class="project">
+                            <img src="engeneer2.jpg" alt="" height="280px">
+                            <div class="overlay">
+                                <h4 class="text-light">Do you want to be Web Developer?<br><span class="h6">Join ASPA</span> </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+      <footer>
+        <h3 class="py-3 bg-dark text-light text-center mb-0 fixed-bottom" >Designed by Farid</h3>
+      </footer>
+      
+      
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>
